@@ -1,0 +1,18 @@
+p {
+   font-family: Georgia;
+   color: black;
+   }
+
+body {
+      background: lightblue;
+  }
+
+  h1 {
+      text-align: center;
+  }
+
+  h2 {
+      text-decoration: underline;
+      background-color: blue;
+      text-align: center;
+  }
