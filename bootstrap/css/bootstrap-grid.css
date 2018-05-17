@@ -8,6 +8,9 @@
   width: device-width;
 }
 
+body { background-color: lightblue
+}
+
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
