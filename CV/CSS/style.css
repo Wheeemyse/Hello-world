@@ -16,3 +16,9 @@ body {
       background-color: blue;
       text-align: center;
   }
+  img {
+      border-radius: 50%;
+      float: right;
+      height: 200px;
+      color: lightblue;
+  }

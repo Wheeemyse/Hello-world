@@ -4,25 +4,44 @@
     <meta charset="utf-8">
     <title>Talla Seck</title>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script>
+
+    function toggle_div() {
+        if(document.getElementById('competence').style.display=='block'){
+          document.getElementById('competence').style.display='none';
+          document.getElementById('bb').innerHTML="+"
+         }
+          else {
+         document.getElementById('competence').style.display='block';
+         document.getElementById('bb').innerHTML="-"
+         }
+  }
+
+
+    </script>
+
   </head>
   <body>
 
-    <h1>Talla SECK</h1>
+    <button id="bb" type="button" onclick="toggle_div();">-</button>
+
+    <img id="image" src="theblash.jpg" alt="">
+    <h1 class="nom">Talla SECK</h1>
     <p>7 rue Daux</p>
     <p>08000 Charleville-Mézieres</p>
     <p>07 71 69 44 97</p>
     <p>talla.m.seck@gmail.com</p>
 
-    <img src="the-blash.jpg" alt="the-blash">
 
-   <div class="information">
     <h2>Compétences</h2>
-    <p>Conception de nouveau projet</p>
-    <p>Maitrise des logiciels SolidWorks et Inventor</p>
-    <p>Essai de RDM sur Catia</p>
-    <p>Reconception de machine spécial</p>
+    <div id="competence" style="visibility:visible">
+      <p>Conception de nouveau projet</p>
+      <p>Maitrise des logiciels SolidWorks et Inventor</p>
+      <p>Essai de RDM sur Catia</p>
+      <p>Reconception de machine spécial</p>
+    </div>
 
-    <h2>Expériences professionnelles</h2>
+    <h2 class="experience">Expériences professionnelles</h2>
     <p>2016 Wheelabrator (Norican group), Dessinateur projeteur</p>
     <ul>
       <li>Assemblage d'une granailleuse à partir de sous-assemblage.</li>
@@ -30,22 +49,22 @@
       <li>Reconception d'une grenailleuse dans le but d'en reduire les dimensions</li>
     </ul>
 
-    <h2>Formation</h2>
+    <h2 class="formation">Formation</h2>
     <p>2015-2016 Niveau Licence pro Conception intégrée et productique des Matériaux</p>
     <p>2014 BTS en Conception de Produit Industriel</p>
     <p>BAC STI option electrotechnique</p>
 
-    <h2>Langues</h2>
+    <h2 class="langue">Langues</h2>
     <p>Français: langue maternelle</p>
     <p>Anglais: lu et écrit</p>
     <p>Espagnol: Niveau scolaire</p>
 
-    <h2>Activités extra-professionnelles</h2>
+    <h2 class="activité">Activités extra-professionnelles</h2>
     <ul>
       <li>Passion pour l'informatique et les nouvelles technologies</li>
       <li>intêret prononcé pour la culture japonaise</li>
       <li>Pratique regulière du vélo, du basket et de la danse</li>
     </ul>
-  </div>
+
   </body>
 </html>
