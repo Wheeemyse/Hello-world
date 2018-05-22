@@ -1,5 +1,5 @@
 <?php
-  $recipient = "tallaseck@hotmail.fr";
+  $recipient = "talla.m.seck@gmail.com";
   $fmtMerci= implode("", file("merci.htt"));
   $fmtMail= implode("", file("mail.htt"));
 
