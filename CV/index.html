@@ -4,25 +4,13 @@
     <meta charset="utf-8">
     <title>Talla Seck</title>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <script>
-
-    function toggle_div() {
-        if(document.getElementById('competence').style.display=='block'){
-          document.getElementById('competence').style.display='none';
-          document.getElementById('bb').innerHTML="+"
-         }
-          else {
-         document.getElementById('competence').style.display='block';
-         document.getElementById('bb').innerHTML="-"
-         }
-  }
-
-
-    </script>
 
   </head>
-  <body>
 
+  <body>
+    <?php
+      include "header.html";
+    ?>
     <button id="bb" type="button" onclick="toggle_div();">-</button>
 
     <img id="image" src="theblash.jpg" alt="">
@@ -67,4 +55,9 @@
     </ul>
 
   </body>
+  <footer>
+    <?php
+      include "footer.html";
+     ?>
+  </footer>
 </html>

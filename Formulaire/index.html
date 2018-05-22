@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/formulaire.php" method="post">
+      <input type="radio" name="Sexe" value="Homme"<h3>Homme</h3><br>
+      <input type="radio" name="Sexe" value="Femme"<h3>Femme</h3><br>
+      Prénom:<br>
+      <input type="text" name="Prénom"><br>
+      Nom:<br>
+      <input type="text" name="Nom"><br>
+      Age:<br>
+        <select class="age" name="age">
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+        </select><br>
+      Loisir:<br>
+      <input type="text" name="Loisir"><br>
+      Autre:<br>
+      <textarea name="Autre" rows="8" cols="80"></textarea><br>
+      <input type="submit" value="Envoyer">
+
+      <?php
+        $recipient = "mail@1and1aide.fr";
+        $fmtMerci= implode("", file("merci.htt"));
+        $fmtMail= implode("", file("mail.htt"));
+
+        foreach($_POST as $key=> $val) {
+        $fmtMerci= str_replace("<$key>", $val, $fmtMerci);
+        $fmtMail= str_replace("<$key>", $val, $fmtMail);
+        }
+
+        if ($_POST["access"] == "stopspam") {
+        mail($recipient, $_POST["subject"], $fmtMail);
+        }
+
+        echo $fmtMerci;
+      ?>
+
+    </form>
+    <footer>
+      <h3>Footer formulaire</h3>
+    </footer>
+  </body>
+</html>
